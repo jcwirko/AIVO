@@ -6,8 +6,8 @@ lo aplicado acá también se haría con Slim!
  ## Setup 
  
 * Copiar `.env.local` a `.env`
-* Levantar los contenedores: `./vendor/bin/sail up`
-* Ingresas al contenedor `docker exec -it aivo_aivo_1 bash`
+* Levantar los contenedores: `docker-compose up`
+* Ingresas al contenedor `docker exec -it aivo bash`
     * Ejecutar `composer install`
 * Importar Postman que se encuentra en `/postman/aviso.postman_collection`
 
@@ -21,9 +21,7 @@ lo aplicado acá también se haría con Slim!
   
   1. Artistas: `http://0.0.0.0/api/v1/spotify/artistas?q="los piojos"`
   2. Albums: `http://0.0.0.0/api/v1/spotify/discografia-by-banda?q=0SnyKkoyBaB2fG8IJH4xmU`
- 
- * Branch `git checkout main`
- 
+
  * Se mantuvo mi client and secret key de spotify en el .env.local para faciliar
  las pruebas
  
