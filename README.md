@@ -32,6 +32,8 @@ lo aplicado acá también se haría con Slim!
 e implementa una interfaz `app/Contracts/MusicaService.php` 
 * Un resource que realiza el formateo de los datos antes de ser devueltos al front `app/Http/Resources/MusicaResources.php` 
 * Las variables de entorno de spotify utilizadas dentro del adapter se encuentran en `/config/services.php`
+* Al recuperar el token este se guarda en cache hasta que expire, lo ideal sería usar redis pero en 
+este caso use "files" nomás
 
 ## TEST
 
