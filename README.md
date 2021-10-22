@@ -10,6 +10,7 @@ lo aplicado acá también se haría con Slim!
  
  ## Consideraciones
  
+ * Branch `git checkout main`
  * Ruta `/api/v1/albums?q=[banda]` dentro de  `routes/api.php`
  
  * Se agregó spotify como servicio en `config/services`

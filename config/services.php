@@ -32,6 +32,8 @@ return [
 
 	'spotify' => [
 		'client_id' => env('SPOTIFY_CLIENT_ID'),
-		'client_secret' => env('SPOTIFY_CLIENT_SECRET')
+		'client_secret' => env('SPOTIFY_CLIENT_SECRET'),
+		'api_url' => 'https://api.spotify.com/v1/',
+		'accounts_url' => 'https://accounts.spotify.com/api/'
 	],
 ];
