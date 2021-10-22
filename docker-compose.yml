@@ -1,17 +1,25 @@
 version: '3'
 services:
-    aivo:
+  aivophp:
         container_name: aivo
+        hostname: aivophp
         build:
           context: .
           dockerfile: Dockerfile
-        ports:
-            - '${APP_PORT:-80}:80'
+        restart: unless-stopped
+        working_dir: /var/www/html/app
         volumes:
-            - '.:/var/www/html'
-        networks:
-            - aivo
+            - .:/var/www/html/app
 
-networks:
-      aivo:
-        driver: bridge
+  aivonginx:
+      container_name: aivo_nginx
+      hostname: aivonginx
+      image: nginx:1.17
+      restart: unless-stopped
+      depends_on:
+        - aivophp
+      ports:
+        - '${APP_PORT:-80}:80'
+      volumes:
+        - .:/var/www/html/app
+        - ./docker/virtualhost.conf:/etc/nginx/conf.d/default.conf

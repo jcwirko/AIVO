@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c19a8f71-6294-41a4-b941-341e0fe62836",
+		"_postman_id": "6cbb216e-8895-4e91-8054-62cd535d0b29",
 		"name": "Aivo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -21,14 +21,12 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://0.0.0.0/api/v1/spotify/artistas?q=\"los piojos\"",
+							"raw": "http://localhost:80/api/v1/spotify/artistas?q=\"los piojos\"",
 							"protocol": "http",
 							"host": [
-								"0",
-								"0",
-								"0",
-								"0"
+								"localhost"
 							],
+							"port": "80",
 							"path": [
 								"api",
 								"v1",
