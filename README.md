@@ -23,9 +23,9 @@ lo aplicado acá también se haría con Slim!
   2. Albums: `http://0.0.0.0/api/v1/spotify/discografia-by-banda?q=0SnyKkoyBaB2fG8IJH4xmU`
  
  * Branch `git checkout main`
- * Ruta `/api/v1/albums?q=[banda]` dentro de  `routes/api.php`
  
- * Se agregó spotify como servicio en `config/services`
+ * Se mantuvo mi client and secret key de spotify en el .env.local para faciliar
+ las pruebas
  
 ## Planteamiento
 
@@ -33,7 +33,7 @@ lo aplicado acá también se haría con Slim!
 * Un adapter que se encarga de la comunicación con spotify `app/Adapters/SpotifyAdaptaer.php` 
 e implementa una interfaz `app/Contracts/MusicaService.php` 
 * Un resource que realiza el formateo de los datos antes de ser devueltos al front `app/Http/Resources/MusicaResources.php` 
-* Las variables de entorno utilizadas dentro del adapter se encuentran en `/config/services.php`
+* Las variables de entorno de spotify utilizadas dentro del adapter se encuentran en `/config/services.php`
 
 ## TEST
 
